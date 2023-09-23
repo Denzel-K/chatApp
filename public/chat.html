@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat page</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/chat.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat_wrapper">
+            <div class="sidebar">
+                <div class="title">
+                    Frame Chat
+                </div>
+                <div class="activity">
+                    <div class="room_desc desc">
+                        <div class="room_title">
+                            Room name
+                        </div>
+                        <div class="roomName"></div>
+                    </div>
+                    <div class="user_desc desc">
+                        <div class="room_title">
+                            Users
+                        </div>
+                        <div class="room_name">
+                           <ul class="roomUsers">
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat_field">
+                <div class="actions">
+                    <div class="title_mobile hidden">
+                      <div class="menu_toggle"></div>
+                    </div>
+                    <a href="index.html" class="btn">
+                        Leave Room
+                    </a>
+                </div>
+                <div class="chats">
+                  <!-- <div class="message">
+                     <p class="meta">
+                      <span class="username">Jack</span>
+                      <span class="time">9:30 pm</span>
+                    </p>
+                    <p class="textMessage">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem totam obcaecati suscipit
+                    </p>
+                  </div> -->
+                </div>
+                <div class="type_box">
+                  <form id="chat_form">
+                      <div class="type_field">
+                          <span><input type="text" placeholder="Enter Message" name="text" id="text"></span>
+                          <span><button class="btn" type="submit">Send</button></span>                           
+                         </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.2/qs.min.js" integrity="sha512-vCegEXqPUYpZsTGz2lk0jaQ1psxtFeniVJACAXhMVxuoYa/N4nZkjoVFOxLwP7uGeQOoemiz7DQrIpRTj4IBPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/qs@6.11.2/dist/qs.min.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script>
+        const menuToggle = document.querySelector('.menu_toggle');
+        const sidebar = document.querySelector('.sidebar');
+        const titleMobile = document.querySelector('.title_mobile');
+
+        menuToggle.addEventListener('click', ()=>{
+        titleMobile.classList.toggle('active');
+        sidebar.classList.toggle('active');
+        });
+    </script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

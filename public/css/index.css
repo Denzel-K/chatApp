@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --btn-main: #c00b4e;
+  --btn-sec: #e82369;
+  --bg-main: hsl(234, 5.8%, 11.1%);
+  --bg-pri: hsl(255, 67%, 2%);
+  --bg-sec: hsl(235, 55%, 4%);
+  --input-bg: hsl(234, 91.9%, 10.1%);
+  --txt-pri: hsl(234, 72.3%, 75.5%);
+  --txt-std: hsl(256, 67%, 46%);
+  --txt-main: hsl(234, 82.6%, 84.3%);
+  --txt-sec: hsl(234, 81.9%, 92.6%);
+}
+body {
+  background-color: var(--bg-main);
+  font-family: 'Epilogue', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.form_wrapper {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_head {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: var(--btn-main);
+  color: var(--txt-pri);
+  font-size: 20px;
+}
+
+#join_form {
+  width: 100%;
+  padding: 1.25rem 0.5rem;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--bg-pri);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+label {
+  color: var(--txt-pri);
+  padding: 0.5rem 0;
+}
+
+input {
+  border: 1px solid var(--txt-pri);
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  border-radius: 10px;
+  color: var(--txt-main);
+  background-color: var(--input-bg);
+  transition: 0.5s;
+}
+
+select {
+  background-color: var(--input-bg);
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  border-radius: 10px;
+  color: var(--txt-main);
+  border: 1px solid var(--txt-pri);
+  transition: 0.5s; 
+
+  }
+input:hover {
+  border: 1.5px solid var(--btn-main);
+  cursor: text;
+}
+select:hover {
+  border: 1.5px solid var(--btn-main);
+  cursor: pointer;
+}
+input:active, select:active {
+  border: 1.5px solid var(--btn-main);
+}
+
+.btn {
+  background-color: var(--btn-sec);
+  font-size: 18px;
+  padding: 0.5rem 1.45rem;
+  text-align: center;
+  margin: 1rem 0;
+  border-radius: 10px;
+  border: none;
+  transition: 0.5s;
+  color: black;
+}
+
+.btn:hover {
+  background-color: var(--btn-sec);
+  cursor: pointer;
+  color: var(--txt-pri);
+}
+
+@media(max-width: 600px){
+  .container {
+    padding: 0.75rem;
+  }
+  .form_wrapper {
+    width: 100%;
+  }
+}
